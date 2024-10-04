@@ -1,0 +1,437 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 252, 216);
+    margin: 0;
+    padding: 0;
+}
+.soyboton{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.soyboton:hover{
+    background-color: rgb(255, 107, 8);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.soyactive{
+    background-color: rgb(0, 122, 31);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.soyactive:active{
+    background-color: gray;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+.soyanylink:any-link{
+    background-color: gray;
+    border: 1px solid rgb(255, 255, 255);
+    color: orange;
+}
+  .soyanylink:-webkit-any-link {
+    border: 1px solid rgb(255, 255, 255);
+    color: orange;
+  }
+
+  input:blank {
+    border: 2px solid red;
+}
+textarea:blank {
+    border: 2px solid red;
+}
+.soychecked{
+
+        margin: 8px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      /* Labels for checked inputs */
+      input:checked + label {
+        color: red;
+      }
+      
+      /* Radio element, when checked */
+      input[type="radio"]:checked {
+        box-shadow: 0 0 0 3px orange;
+      }
+      
+      /* Checkbox element, when checked */
+      input[type="checkbox"]:checked {
+        box-shadow: 0 0 0 3px hotpink;
+      }
+      
+      /* Option elements, when selected */
+      option:checked {
+        box-shadow: 0 0 0 3px lime;
+        color: red;
+      }
+      .soycurrent{
+        :current(p, span) {
+            background-color: yellow;
+          }
+      }
+      .soydefault
+        input:default {
+            box-shadow: 0 0 2px 1px coral;
+          }
+          
+          input:default + label {
+            color: coral;
+      }
+      .soydefinied{
+        custom-element:not(:defined) {
+            border-color: grey;
+            color: grey;
+          }
+          
+          custom-element:defined {
+            background-color: wheat;
+            border-color: black;
+            color: black;
+          }
+          
+          /* show loading message */
+          custom-element:not(:defined)::before {
+            content: "Loading...";
+            position: absolute;
+            inset: 0 0 0 0;
+            align-content: center;
+            text-align: center;
+            font-size: 2rem;
+            background-color: white;
+            border-radius: 1rem;
+          }
+          
+          /* remove the loading message */
+          custom-element:defined::before {
+            content: "";
+          }
+      }
+     .soydir :dir(ltr) {
+        background-color: rgb(243, 243, 28);
+      }
+      
+      :dir(rtl) {
+        background-color: rgb(138, 241, 255);
+      }
+.soyempty
+    .box {
+        background: pink;
+        margin: 10px;
+        height: 20px;
+        width: 80px;
+      }
+      
+      .box:empty {
+        background: lime;  
+}
+     .soyenabled{
+        input:enabled {
+            color: #2b2;
+          }
+          
+          input:disabled {
+            color: #aaa;
+          }
+     }
+     .soyfirst{
+        @page :first {
+            margin-left: 50%;
+            margin-top: 50%;
+          }
+          
+          p {
+            page-break-after: always;
+          }
+     }
+     .soyfirst-child
+        p:first-child {
+        color: lime;
+        background-color: black;
+        padding: 5px
+     }
+     .soyfirst-of-typ
+        p:first-of-type {
+            color: red;
+            font-style: italic;
+     }
+     .soyfocus{
+        .red-input:focus {
+            background-color: yellow;
+            color: red;
+          }
+          
+          .blue-input:focus {
+            background: yellow;
+            color: blue;
+          }
+     }
+     .soyfocus-visible{
+        input,
+button {
+  margin: 5px;
+}
+
+.focus-only:focus {
+  outline: 2px solid black;
+}
+
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+     }
+     .soyfocus-within{
+        form {
+            border: 1px solid;
+            color: gray;
+            padding: 4px;
+          }
+          
+          form:focus-within {
+            background: rgb(14, 185, 51);
+            color: black;
+          }
+          
+          input {
+            margin: 4px;
+          }
+     }
+     .soyboton {
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .soyform 
+      input:user-invalid {
+        border: 2px solid red;
+      }
+      
+      input:user-invalid + span::before {
+        content: "✖";
+        color: red;
+      }
+    
+    /* Pseudoclase :focus */
+    .soybotonfocus:focus {
+      background-color: green;
+      color: white;
+    }
+    
+    p {
+      font-weight: bold;
+    }
+    
+    li:nth-child(-n + 3) {
+      border: 2px solid orange;
+      margin-bottom: 1px;
+    }
+    
+    li:nth-child(even) {
+      background-color: lightyellow;
+    }
+    
+    /* Pseudoclase :not() */
+    .soyboton:not(.special) {
+      border-color: darkblue;
+    }
+    
+    /* Pseudoclase :is() */
+    .soyboton:is(.special) {
+      background-color: purple;
+      color: white;
+    }
+    
+    /* Pseudoclase :where() */
+    .soyboton:where(.targeted, .focus) {
+      font-weight: bold;
+    }
+    
+    /* Pseudoclase :has() */
+    .soybotonhas::before {
+      content: "📦 ";
+      color: purple;
+    }
+    
+    /* Pseudoclase :host (simulada) */
+    .soybotonhost {
+      background-color: lightblue;
+    }
+    
+    /* Pseudoclase :future (simulada) */
+    .soyfuture {
+      color: white;
+      background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+      font-size: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    /* :valid y :invalid para campos de formulario */
+    input:valid {
+      border: 2px solid green;
+    }
+    
+    input:invalid {
+      border: 2px solid red;
+    }
+    
+    /* Estilo para texto placeholder */
+    input::placeholder {
+      color: gray;
+    }
+    
+    input:placeholder-shown {
+      background-color: lightgray;
+    }
+    
+    /* Links visitados */
+    :visited {
+      color: forestgreen;
+      text-decoration-color: hotpink;
+    }
+    
+    /* Enlace :target */
+    :target {
+      border: 2px solid black;
+    }
+    
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    
+    .req {
+      color: red;
+    }
+    
+    /* Requerido */
+    *:required {
+      background-color: gold;
+    }
+    
+    /* Elementos en fullscreen */
+    .element {
+      background-color: lightyellow;
+    }
+    
+    .element:fullscreen {
+      background-color: lightpink;
+    }
+    
+    /* Estilo de progress */
+    progress {
+      margin: 4px;
+      width: 20vw;
+      height: 20px;
+    }
+    
+    progress:indeterminate {
+      width: 20vw;
+      height: 20px;
+    }
+    
+    button {
+      display: block;
+      margin: auto;
+      width: 10rem;
+      height: 2rem;
+    }
+    
+    :modal {
+      background-color: beige;
+      border: 2px solid burlywood;
+      border-radius: 5px;
+    }
+    
+    /* Encabezados centrados */
+    h1, h2 {
+      text-align: center;
+    }
+    
+    /* Párrafos en negrita */
+    p {
+      font-weight: bold;
+      color: black;
+    }
+    
+    ol {
+      list-style-type: upper-alpha;
+      color: darkblue;
+    }
+    
+    /* Not applied to ol, because of lower specificity */
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :where(ol, ul, menu:unsupported) :where(ol, ul) {
+      color: green;
+    }
+    
+    :where(ol, ul) :where(ol, ul) ol {
+      list-style-type: lower-greek;
+      color: chocolate;
+    }
+    
+    form {
+      width: 100%; /* Ajusta el ancho del formulario */
+      max-width: 300px; /* Limita el ancho máximo del formulario */
+      height: 100px; /* Ajusta la altura del formulario */
+      margin: 0 auto; /* Centra el formulario */
+      padding: 10px; /* Añade un pequeño padding */
+      border: 2px solid black; /* Añade un borde para definir los límites */
+      border-radius: 8px;
+      background-color: white; /* Fondo blanco para destacar el formulario */
+      overflow-y: auto; /* Permite el desplazamiento si el contenido excede la altura */
+    }
+    
+    input,
+    select,
+    textarea {
+      width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+      padding: 5px; /* Reduce el padding interno */
+      margin-bottom: 10px; /* Añade un espacio inferior entre los campos */
+      font-size: 14px; /* Reduce el tamaño de la fuente */
+      border: 1px solid gray; /* Borde más delgado */
+      border-radius: 5px; /* Bordes redondeados */
+    }
+    
+    button {
+      font-size: 10px; /* Reduce el tamaño del botón */
+      padding: 8px 10px; /* Reduce el padding */
+      width: 100px; /* Ajusta el ancho del botón */
+    }
+    
+    label {
+      font-size: 14px; /* Reduce el tamaño del texto de las etiquetas */
+    }
+    
+    p {
+      font-size: 12px; /* Reduce el tamaño del texto de los párrafos */
+    }
+    
+    :host-context(.container) {
+      border: 5px dashed green;
+    }

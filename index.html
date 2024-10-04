@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <link rel="stylesheet" href="estilos.css">
+  <body>
+<div class="container-fluid">
+    <main class="row">
+        <header class="col-12">
+            <h1 class="display-1 text-center"> Pseudo Clases y Pseudo Elementos</h1>
+        </header>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Hover
+            </h2>
+            <a href="index.html" class="soyboton">
+                Soy boton Hover 
+            </a>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Active
+            </h2>
+            <a href="index.html" class="soyactive">
+                Soy boton Active 
+            </a>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Any-link
+            </h2>>
+            <a href="index.html">External link</a><br />
+            <a href="#">Internal target link</a><br />
+            <a>Placeholder link (won't get styled)</a>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Blank
+            </h2>
+        <form class="soyblank">
+            <label for="mensaje">Escribe:</label>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+        </form>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Checked
+            </h2>
+            <section class="soychecked">
+                <input type="radio" name="my-input" id="yes" value="yes" class="display-4 text-center" />
+                <label for="yes">Yes</label>
+              
+                <input type="radio" name="my-input" id="no" value="no" />
+                <label for="no">No</label>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Current
+            </h2>
+            <video controls preload="metadata" class="soycurrent">
+                <source src="video.mp4" type="video/mp4" />
+                <source src="video.webm" type="video/webm" />
+                <track
+                  label="English"
+                  kind="subtitles"
+                  srclang="en"
+                  src="subtitles.vtt"
+                  default />
+              </video>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Default
+            </h2>
+            <fieldset class="soydefault">
+                <legend>Favorite season</legend>
+              
+                <input type="radio" name="season" id="spring" value="spring" />
+                <label for="spring">Spring</label>
+              
+                <input type="radio" name="season" id="summer" value="summer" checked />
+                <label for="summer">Summer</label>
+              
+                <input type="radio" name="season" id="fall" value="fall" />
+                <label for="fall">Fall</label>
+              
+                <input type="radio" name="season" id="winter" value="winter" />
+                <label for="winter">Winter</label>
+              </fieldset>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Definied
+            </h2>
+            <custom-element class="soydefinied">
+                <p>
+                  Loaded content: Lorem ipsum tel sed tellus eiusmod tellus. Aenean. Semper
+                  dolor sit nisi. Elit porttitor nisi sit vivamus.
+                </p>
+              </custom-element>
+              <button id="btn">define the <code>&lt;custom-element&gt;</code></button>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Dir
+            </h2>
+            <div dir="rtl" class="soy.dir">
+                <span>test1</span>
+                <div dir="ltr">
+                  test2
+                  <div dir="auto">Hola</div>
+                </div>
+              </div>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Disabled
+            </h2>
+            <form action="#" class="soydisabled">
+                <fieldset id="shipping">
+                  <legend>Shipping address</legend>
+                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Address" />
+                  <input type="text" placeholder="Zip Code" />
+                </fieldset>
+                <br />
+              </form>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Empty
+            </h2>
+            <section class="soyempty">
+                <div class="box"></div>
+                <div class="box">I will be pink.</div>
+                <div class="box">
+                </div>
+                <div class="box">
+                </div>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Enabled
+            </h2>
+            <form action="url_of_form" class="soyenabled">
+                <label for="FirstField">First field (enabled):</label>
+                <input type="text" id="FirstField" value="Lorem" /><br />
+              
+                <label for="SecondField">Second field (disabled):</label>
+                <input type="text" id="SecondField" value="Ipsum" disabled /><br />
+              
+                <input type="button" value="Submit" />
+              </form>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                First
+            </h2>
+            <section class="soyfirst">
+                <p>First Page.</p>
+                <p>Second Page.</p>
+                <button>Print!</button>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                First-child
+            </h2>
+            <div class="soyfirst-child">
+                <p>This text is selected!</p>
+                <p>This text isn't selected.</p>
+              </div>
+              <div>
+                <p>This text isn't selected.</p>
+              </div>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                First-of-type
+            </h2>
+            <section class="soyfirst-of-type">
+                <h2>Heading</h2>
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Focus
+            </h2>
+            <section class="soyfocus">
+                <div><input class="red-input" value="I'll be red when focused." /></div>
+                <div><input class="blue-input" value="I'll be blue when focused." /></div>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Focus-visible 
+            </h2>
+            <section class="soyfocus-visible">
+                <input class="focus-only" type="text" value=":focus" /><br />
+                <button class="focus-only">:focus</button><br />
+
+                <input class="focus-visible-only" type="text" value=":focus-visible" /><br />
+                 <button class="focus-visible-only">:focus-visible</button>
+            </section>
+        </section>
+        <section class="col-3">
+            <h2 class="display-4 text-center">
+                Focus-within
+            </h2>
+            <p>Try typing into this form.</p>
+
+            <form class="soyfocus-within">
+            <label for="given_name">Given Name:</label>
+            <input id="given_name" type="text" />
+            <br />
+            <label for="family_name">Family Name:</label>
+            <input id="family_name" type="text" />
+            </form>
+        </section>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                User
+            </h2>
+            <form>
+                <label for="email">Email *: </label>
+                <input id="email" name="email" type="email" required />
+                <span></span>
+              </form>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Focus
+            </h2> 
+            <a href="#" class="soyboton soybotonfocus" tabindex="0">Focus Me</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                nth-child()
+            </h2>
+            <ul class="soynth-child">
+                <li>Adhemar da Silva</li>
+                <li>Wang Junxia</li>
+                <li>Wilma Rudolph</li>
+            </ul>
+        </div>
+       
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Visited
+            </h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Not is
+            </h2>
+            <a href="#" class="soyboton special">Is Special</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                targen-within
+            </h2>
+            <a href="#target" class="soyboton targeted">Target Within</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Has
+            </h2>
+            <a href="#" class="soyboton soybotonhas">Has Icon</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Host
+            </h2>
+            <a href="#" class="soyboton soybotonhost">Host Button</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Future
+            </h2>
+            <a href="#" class="soyboton soyfuture">Future Button</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                valid & invalid
+            </h2>
+            <input type="email" class="soyboton form-control" placeholder="Enter email" required>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                target
+            </h2>
+            <a href="#item1">Ir al Item 1</a><br>
+            <a href="#item2">Ir al Item 2</a><br>
+            <a href="#item3">Ir al Item 3</a><br>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Formulario
+            </h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name">Name:<span class="req">*</span></label>
+                    <input id="name" name="name" type="text" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="birth">Date of Birth:</label>
+                    <input id="birth" name="birth" type="date" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="origin">How did you find out about us? <span class="req">*</span></label>
+                    <select id="origin" name="origin" class="form-control" required>
+                        <option>Google</option>
+                        <option>Facebook</option>
+                        <option>Advertisement</option>
+                    </select>
+                </div>
+                <p><span class="req">*</span> - Required field</p>
+            </form>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Full screen
+            </h2>
+            <button class="toggle btn btn-primary">Toggle Fullscreen</button>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Barra de progreso
+            </h2>
+            <h3>Indeterminado</h3>
+            <progress indeterminate></progress>
+            <h3>Determinado</h3>
+            <progress value="50" max="100"></progress>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+               Random Number
+            </h2>
+            <p>Te gustaría ver una nueva fila</p>
+            <button id="showNumber">Show me</button>
+
+            <dialog id="favDialog">
+                <form method="dialog">
+                    <p>Lucky number is: <strong id="number"></strong></p>
+                    <button>Close dialog</button>
+                </form>
+            </dialog>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+                Saturn & Moons
+            </h2>
+            <ol>
+                <li>mitología</li>
+                <li>
+                    <ul>
+                        <li>Zeus</li>
+                        <li>Hera</li>
+                        <li>
+                            <ol>
+                                <li>Atenea</li>
+                                <li>Apolo</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+       <section class="col-3">
+        <h2 class="display-4 text-center">
+            Picture-picture
+        </h2>
+        <section class="soypicture-picture">
+            <video id="myVideo" controls>
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <script>
+                const video = document.getElementById('myVideo');
+                const pipButton = document.getElementById('pipButton');
+            
+                pipButton.addEventListener('click', async () => {
+                    if (document.pictureInPictureElement) {
+                        await document.exitPictureInPicture();
+                    } else {
+                        await video.requestPictureInPicture();
+                    }
+                });
+            </script>
+           </section>
+        </section>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <h2 class="display-4 text-center">
+               Ready-only
+            </h2>
+           
+            <form>
+                <label for="email">Email Address:</label>
+                <input id="email" name="email" type="email" value="test@example.com" />
+
+                <label for="note">Short note about yourself:</label>
+                <textarea id="note" name="note">Don't be shy</textarea>
+
+                <label for="pic">Your picture:</label>
+                <input id="pic" name="pic" type="file" />
+
+                <input type="submit" value="Submit form" />
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center mt-4">
+    <div class="container">
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+    </div>
+</footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
